@@ -80,6 +80,8 @@ class MountainCarEnv(gym.Env):
             xs = np.linspace(self.min_position, self.max_position, 100)
             ys = self._height(xs)
             xys = list(zip((xs-self.min_position)*scale, ys*scale))
+            print xys
+
 
             self.track = rendering.make_polyline(xys)
             self.track.set_linewidth(4)
